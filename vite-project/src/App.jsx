@@ -1,9 +1,13 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+import axios from "axios";
 import IndexPage from "./pages/IndexPage";
 import LoginPage from "./pages/LoginPage";
 import Registerpage from "./pages/Registerpage";
 import Layout from "./Layout";
+
+axios.defaults.baseURL = "http://127.0.0.1:4000";
+axios.defaults.withCredentials = true;
 
 function App() {
   return (
